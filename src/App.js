@@ -3,7 +3,7 @@ import List from "./component/List";
 import "./App.css";
 import { Button, Input, Box, Paper } from "@mui/material";
 import Alert from "./component/Alert";
-
+import PrimarySearchAppBar from "./component/Header";
 const getLocalStorage = () => {
   let list = localStorage.getItem("list");
   if (list) {
@@ -70,6 +70,7 @@ function App() {
   }, [list]);
   return (
     <>
+      <PrimarySearchAppBar />
       <Paper
         sx={{
           width: 350,
